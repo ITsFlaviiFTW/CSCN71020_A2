@@ -71,19 +71,19 @@ int getIntInput(char message[]) {
 }
 
 void setLength(int input, int *length) {
-	if (input > 0 && input < 100) {
+	if (input > 0 && input < 100) {   //the function was allowing the input to be equal to 0 when it should be higher than 0, fixed to only allow numbers higher than 0
 		*length = input;
 	}
 }
 
 void setWidth(int input, int *width) {
-	if (input > 0 && input < 100) {
+	if (input > 0 && input < 100) { //the function was allowing the input to be equal to 100 when it should be lower than 100, fixed to only allow numbers lower than 100
 		*width = input;
 	}
 }
 
 int getPerimeter(int *length, int *width) {
-	int perimeter = *length + *length + *width + *width;
+	int perimeter = *length + *length + *width + *width;  //the function was not calculating the perimeter integer correctly, fixed from "*length + *length + *width" to "*length + *length + *width + *width"
 	return perimeter;
 }
 
